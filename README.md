@@ -26,7 +26,7 @@ The Lucas-Kanade method, in contrast, assumes a constant motion model within a s
 
 **Key Equation:**
 
-$\[ A \cdot \begin{bmatrix} u \\ v \end{bmatrix} = -b \]$
+$$\[ A \cdot \begin{bmatrix} u  \\ v \end{bmatrix} = -b \]$$
 
 Where $\(A\)$ and $\(b\)$ are matrices derived from image gradients within the neighborhood.
 
