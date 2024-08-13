@@ -19,22 +19,22 @@ The Horn-Schunck method is based on the minimization of a global energy function
 
 **Key Equation:**
 
-\[ \text{Optical Flow Equation: } \nabla_x I \cdot u + \nabla_y I \cdot v + \nabla_t I = 0 \]
+$\[ \text{Optical Flow Equation: } \nabla_x I \cdot u + \nabla_y I \cdot v + \nabla_t I = 0 \]$
 
 ### 2. Lucas-Kanade Method
 The Lucas-Kanade method, in contrast, assumes a constant motion model within a small neighborhood around each pixel. It uses a weighted least squares approach to solve the optical flow equations for each pixel neighborhood.
 
 **Key Equation:**
 
-\[ A \cdot \begin{bmatrix} u \\ v \end{bmatrix} = -b \]
+$\[ A \cdot \begin{bmatrix} u \\ v \end{bmatrix} = -b \]$
 
-Where \(A\) and \(b\) are matrices derived from image gradients within the neighborhood.
+Where $\(A\)$ and $\(b\)$ are matrices derived from image gradients within the neighborhood.
 
 ## Implementation
 
 ### 1. Horn-Schunck Implementation
 - **Gradient Calculation:** Sobel filters were used to compute image gradients, given their precision over simple finite differences.
-- **Parameter Tuning:** The influence of the parameter \( \lambda \) was studied, balancing between noise sensitivity and flow smoothness.
+- **Parameter Tuning:** The influence of the parameter $\( \lambda \)$ was studied, balancing between noise sensitivity and flow smoothness.
 
 ### 2. Lucas-Kanade Implementation
 - **Neighborhood Considerations:** Various sizes of neighborhoods were tested to find an optimal balance between capturing local details and computational efficiency.
